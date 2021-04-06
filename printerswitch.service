@@ -1,0 +1,13 @@
+[Unit]
+Description=Switch printer on and off depending on the printer's queue
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+#RemainAfterExit=yes
+ExecStart=/usr/local/bin/printerswitch.py
+
+[Install]
+WantedBy=multi-user.target
+
