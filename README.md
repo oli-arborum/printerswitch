@@ -20,6 +20,7 @@ Now check if you can switch your TP-Link Smart WiFi Plug (replace "xxx.xxx.xxx.x
 ./tplink_smartplug.py -t xxx.xxx.xxx.xxx -c on
 ./tplink_smartplug.py -t xxx.xxx.xxx.xxx -c off
 ```
+
 ### Adapt printerswitch configuration
 Before installation you need to adapt `printerswitch.py` to your demands:
 * Change the `PRINTER_NAME` to the name of the queue that is assigned to the printer that should be switched on and off.
@@ -38,6 +39,10 @@ On machines with systemd you can use the provided unit file to run `printerswitc
 sudo cp printerswitch.py /etc/systemd/system/
 sudo systemctl start printerswitch.service
 ```
+
+## Adaptation
+It should not be too difficult to adapt `printerswitch.py` to plugs of other vendors or even to home automation frameworks: Just edit the functions `printerOn()` and `printerOff()` to execute the appropriate commands.
+
 ## Inspirations and acknowledgements
 * first idea: https://www.raspberrypi.org/forums/viewtopic.php?t=45556
 * switch TP-Link Smart WiFi plug from Python script: https://github.com/softScheck/tplink-smartplug
