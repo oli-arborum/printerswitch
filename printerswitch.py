@@ -30,7 +30,7 @@ furnished to do so, subject to the following conditions:
 # name of printer queue
 PRINTER_NAME = "HP-Color-LaserJet-CP1215"
 # IP address of TP-Link WiFi socket
-SOCKET_IP_ADDR = "192.168.1.220"
+SOCKET_IP_ADDR = "xxx.xxx.xxx.xxx"
 # delay for switching printer off after queue is empty (in seconds)
 DELAY_PRINTER_OFF_S = 600 # 10 min
 # use journal for logging
