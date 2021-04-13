@@ -15,7 +15,7 @@ Firstly, get `tplink_smartplug.py` and make it executable for all users:
 wget https://raw.githubusercontent.com/softScheck/tplink-smartplug/master/tplink_smartplug.py
 chmod a+x tplink_smartplug.py
 ```
-Now check if you can switch your TP-Link Smart WiFi Plug (replace "xxx.xxx.xxx.xxx" with the actual IPv4 address of your Smart Plug, use e.g. the DHCP lease table of you router to find it out):
+Now check if you can switch your TP-Link Smart WiFi Plug (replace "xxx.xxx.xxx.xxx" with the actual IPv4 address of your Smart Plug, use e.g. the DHCP lease table of your router to find it out):
 ```
 ./tplink_smartplug.py -t xxx.xxx.xxx.xxx -c on
 ./tplink_smartplug.py -t xxx.xxx.xxx.xxx -c off
@@ -23,7 +23,7 @@ Now check if you can switch your TP-Link Smart WiFi Plug (replace "xxx.xxx.xxx.x
 
 ### Adapt printerswitch configuration
 Before installation you need to adapt `printerswitch.py` to your demands:
-* Change the `PRINTER_NAME` to the name of the queue that is assigned to the printer that should be switched on and off.
+* Change the `PRINTER_NAME` to the name of the printer queue that is assigned to the printer that should be switched on and off. Use `lpstat -p` to list all printer queues.
 * Change `SOCKET_IP_ADDR` to the IPv4 address of your TP-Link Smart WiFi Plug (see previous section).
 * Optionally change `DELAY_PRINTER_OFF_S` to configure how long (in seconds) the printer shall be kept switched on after the print queue was detected as empty.
 * Optionally set `USE_JOURNAL` to `False` to use stdout/stderr for status and error messages. (Useful for debugging and machines without systemd.)
