@@ -39,6 +39,10 @@ On machines with systemd you can use the provided unit file to run `printerswitc
 sudo cp printerswitch.py /etc/systemd/system/
 sudo systemctl start printerswitch.service
 ```
+To start the service automatically you need to *enable* the systemd unit:
+```
+sudo systemctl enable printerswitch.service
+```
 
 ## Adaptation
 It should not be too difficult to adapt `printerswitch.py` to plugs of other vendors or even to home automation frameworks: Just edit the functions `printerOn()` and `printerOff()` to execute the appropriate commands.
